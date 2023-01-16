@@ -2,8 +2,9 @@
     border: 5px solid blue;
     background-color: aqua;
     display: grid;
-    grid-template-columns: 100px 200px 300px;
-    grid-template-rows: 150px 250px;
+    grid-template-rows: 100px 200px;
+    grid-auto-columns: 100px;
+    grid-auto-flow: column;
 }
 
 .item {
