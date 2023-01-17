@@ -7,8 +7,9 @@ main {
 }
 .hero {
     display: grid;
-    grid-template-columns: 2fr 3fr;
-    grid-auto-rows: 400px;
+    grid-template-columns: minmax(300px, 2fr) 3fr;
+    grid-auto-rows: 550px;
+    border-bottom: 1px solid #ddd;
 }
 .hero-image {
     width: 100%;
@@ -49,7 +50,7 @@ main {
 }
 .dishes-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(150px, 200px));
+    grid-template-columns: repeat(auto-fit, minmax(75px, 200px));
     grid-auto-rows: 1fr;
     gap: 25px;
     justify-content: center;
@@ -61,4 +62,41 @@ main {
 }
 .dishes-item__big {
     grid-area: 1 / 1 / 3 / 3;
+}
+.menu {
+    margin-bottom: 200px;
+}
+.menu-title {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.menu-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 150px);
+}
+.menu-grid-item {
+    background-color: coral;
+    padding: 15px;
+    border-radius: 50px;
+}
+.menu-grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+@media screen and (max-width: 768px){
+    .hero {
+        grid-template-columns: minmax(300px, 500px);
+        justify-content: center;
+    }
+    .hero-image {
+        display: none;
+    }
+    .dishes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(75px, 100px));
+    }
 }
