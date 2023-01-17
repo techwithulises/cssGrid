@@ -1,0 +1,27 @@
+.contenedor {
+    border: 5px solid blue;
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 75px 75px 75px;
+    place-content: center;
+}
+.item {
+    font-size: 4rem;
+}
+.item-1 {
+    border: 5px solid red;
+    background-color: yellow;
+    grid-column-start: 1;/*Numero de linea inicia*/
+    grid-column-end: 4;/*Numero de linea termina*/
+}
+.item-2 {
+    border: 5px solid red;
+    background-color: royalblue;
+    grid-row: 2 / 4;/*linea donde empieza y donde termina*/
+}
+.item-3 {
+    border: 5px solid red;
+    background-color: blueviolet;
+    grid-area: 2 / 2 / 4 / 4;/*fila y columna donde comienza, fila y columna donde termina*/
+}
