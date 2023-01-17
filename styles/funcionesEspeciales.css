@@ -1,0 +1,11 @@
+.contenedor {
+    border: 5px solid blue;
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: minmax(30px, 300px) 200px minmax(60px, 250px);
+    grid-template-rows: repeat(3, auto);/*En lugar de poner 100px 100px 100px */
+}
+.item {
+    border: 5px solid red;
+    font-size: 2rem;
+}
